@@ -5,12 +5,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import { Roboto_Mono } from "next/font/google";
+
+export const roboto_mono = Roboto_Mono({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Header() {
   return (
-    <header className="z-[999] relative">
+    <header className={`${roboto_mono.className} z-[999] relative`}>
       <motion.div
-        className="fixed w-full top-0 left-1/2  h-[4.5rem] rounded-none bg-white bg-opacity-80 border border-white border-opacity-40 shadow-lg shadow-black/[0.10] backdrop-blur-[0.rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full"
+        className="fixed w-full top-0 left-1/2  h-[4.5rem] rounded-none bg-white bg-opacity-80 border border-white border-opacity-40 shadow-lg shadow-black/[0.10] backdrop-blur-[0.rem] sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}></motion.div>
 
