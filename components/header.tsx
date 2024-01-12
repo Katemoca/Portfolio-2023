@@ -1,5 +1,5 @@
 // This instructs Next.js to treat the file as a client-side component, allowing you to use the "<motion.div>" component without encountering issues during the server-side rendering process.
-"use client"; // 'use client' lets you mark what code runs on the client.
+"use client"; // 'use client' lets you mark what code runs on the client. These client components are pre-rendered on the server.
 
 import React from "react";
 import { motion } from "framer-motion";
