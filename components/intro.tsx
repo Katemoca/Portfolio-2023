@@ -140,7 +140,7 @@ export default function Intro() {
           href={"#contact"}
           className="group bg-purple-700 text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 hover:bg-gray-950 active:scale-105 transition">
           Contact me
-          <BsArrowRight className="opacity-80 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" />
         </Link>
         <a
           href="/CV.pdf"
