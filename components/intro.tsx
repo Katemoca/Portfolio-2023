@@ -39,6 +39,7 @@ export default function Intro() {
           </motion.div>
           <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-4xl flex -space-x-3">
             <motion.span
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -47,7 +48,7 @@ export default function Intro() {
                 delay: 0.1,
                 duration: 0.7,
               }}>
-              2️⃣
+              2
             </motion.span>
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
@@ -61,6 +62,7 @@ export default function Intro() {
               💐
             </motion.span>
             <motion.span
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -69,7 +71,7 @@ export default function Intro() {
                 delay: 0.1,
                 duration: 0.7,
               }}>
-              0️⃣
+              0️
             </motion.span>
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
@@ -83,6 +85,7 @@ export default function Intro() {
               💐
             </motion.span>
             <motion.span
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -91,7 +94,7 @@ export default function Intro() {
                 delay: 0.1,
                 duration: 0.7,
               }}>
-              2️⃣
+              2️
             </motion.span>
             <motion.span
               initial={{ opacity: 0, scale: 0 }}
@@ -105,6 +108,7 @@ export default function Intro() {
               💐
             </motion.span>
             <motion.span
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -113,7 +117,7 @@ export default function Intro() {
                 delay: 0.1,
                 duration: 0.7,
               }}>
-              4️⃣
+              4️
             </motion.span>
           </div>
         </div>
