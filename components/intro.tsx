@@ -39,7 +39,7 @@ export default function Intro() {
           </motion.div>
           <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-4xl flex -space-x-3">
             <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg  sm:text-2xl text-white font-extrabold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -51,6 +51,7 @@ export default function Intro() {
               2
             </motion.span>
             <motion.span
+              className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -62,7 +63,7 @@ export default function Intro() {
               💐
             </motion.span>
             <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mx-2 sm:text-2xl text-white font-extrabold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -74,6 +75,7 @@ export default function Intro() {
               0️
             </motion.span>
             <motion.span
+              className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -85,7 +87,7 @@ export default function Intro() {
               💐
             </motion.span>
             <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mx-2 sm:text-2xl text-white font-extrabold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -97,6 +99,7 @@ export default function Intro() {
               2️
             </motion.span>
             <motion.span
+              className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -108,7 +111,7 @@ export default function Intro() {
               💐
             </motion.span>
             <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mr-2 sm:text-2xl text-white font-semibold`}
+              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mx-2 sm:text-2xl text-white font-extrabold`}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{
@@ -122,8 +125,8 @@ export default function Intro() {
           </div>
         </div>
       </div>
-      <motion.p
-        className={`${roboto_mono.className} font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] sm:text-4xl lg:!leading-[1.2]`}
+      <motion.h1
+        className={`${roboto_mono.className} font-normal mb-10 mt-8  px-4 text-2xl !leading-[1.1] sm:text-2xl lg:!leading-[1.2]`}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}>
@@ -136,13 +139,18 @@ export default function Intro() {
         <span className="underline">{`React.js`}</span>.{" "}
         {`I've also worked with the `}
         <span className="font-bold">MERN and PERN</span> stacks.
-      </motion.p>
+      </motion.h1>
 
-      <div
-        className={`${roboto_mono.className} flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium`}>
+      <motion.div
+        className={`${roboto_mono.className} flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium`}
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}>
         <Link
           href={"#contact"}
-          className="group bg-purple-700 text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 hover:bg-gray-950 active:scale-105 transition">
+          className="group bg-[#007BFF] text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 hover:bg-gray-950 active:scale-105 transition">
           Contact me
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" />
         </Link>
@@ -156,16 +164,16 @@ export default function Intro() {
         <a
           href="https://github.com/Katemoca"
           target="_blank"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.3rem] rounded-full focus:scale-[1.15 hover:text-gray-950 active:scale-105 transition cursor-pointer ">
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.3rem] rounded-full focus:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack">
           <FaGithubSquare />
         </a>
         <a
           href="https://www.linkedin.com/in/katerincastromongua/"
           target="_blank"
-          className="bg-white p-4 text-gray-700  hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer">
+          className="bg-white p-4 text-gray-700  hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack">
           <BsLinkedin />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
