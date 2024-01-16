@@ -2,19 +2,15 @@
 
 import Image from "next/image";
 import React from "react";
-import { motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 import imgProfile from "@/public/imgprofile2.jpg";
-import { Roboto_Mono } from "next/font/google";
+//! NEXT GOOGLE FONTS
+import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
 //! REACT ICONS
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
-
-export const roboto_mono = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function Intro() {
   return (

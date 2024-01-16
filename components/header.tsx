@@ -4,13 +4,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
+//! NEXT GOOGLE FONTS
+import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
-import { Roboto_Mono } from "next/font/google";
-
-export const roboto_mono = Roboto_Mono({
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export default function Header() {
   return (
