@@ -1,10 +1,10 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 
-export default function Projects() {
+export default function Skills() {
   return (
     <div>
-      <SectionHeading>Projects</SectionHeading>
+      <SectionHeading>Skills</SectionHeading>
     </div>
   );
 }
