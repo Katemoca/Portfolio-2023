@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const SectionDivider = ({ height = 1 }) => {
+export default function SectionDivider({ height = 1 }) {
   return (
     <motion.div
       className="relative w-full mt-10 sm:mt-48 mb-36 sm:mb-48 flex items-center justify-center"
@@ -64,6 +64,4 @@ const SectionDivider = ({ height = 1 }) => {
       </svg> */}
     </motion.div>
   );
-};
-
-export default SectionDivider;
+}
