@@ -67,23 +67,17 @@ export const projectsData = [
     title: "HealthPlus",
     description:
       "I worked as a frontend developer on this group project for 2 months. Users can access to a healthcare service by lmaking appointments, choosing their doctors of preference, setting the place and date for the appointments, and more.",
-    tags: ["Javascript", "React", "Firebase", "Tailwind", "Redux "],
+    tags: ["Javascript", "React", "Firebase", "Tailwind", "Redux", "React I18next", "Leaflet" ],
     imageUrl: healthplus,
   },
   {
     title: "Videogames",
     description:
       "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+    tags: ["React", "Javascript", "Module css", "Css", "Redux", "Express", "PostgreSQL", "Sequelize"],
     imageUrl: rmtdevImg,
   },
-  // {
-  //   title: "Countries",
-  //   description:
-  //     "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-  //   tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-  //   imageUrl: wordanalyticsImg,
-  // },
+ 
 ] as const;
 
 export const skillsData = [

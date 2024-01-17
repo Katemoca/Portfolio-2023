@@ -33,7 +33,7 @@ export default function Intro() {
               className="h-40 w-40 rounded-full object-cover shadow-xl border-white border-[0.35rem]"
             />
           </motion.div>
-          <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-4xl flex -space-x-3">
+          <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-4xl -space-x-3 hidden sm:flex">
             <motion.span
               className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg  sm:text-2xl text-white font-extrabold`}
               initial={{ opacity: 0, scale: 0 }}
@@ -146,16 +146,16 @@ export default function Intro() {
         }}>
         <Link
           href={"#contact"}
-          className="group bg-[#007BFF] text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 hover:bg-gray-950 active:scale-105 transition">
+          className="group bg-green-300  text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 active:scale-105 transition">
           Contact me
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" />
         </Link>
         <a
           href="/CV.pdf"
           download
           className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer">
           Download CV
-          <HiDownload className="opacity-80 group-hover:translate-y-1 transition" />
+          <HiDownload className="opacity-80 group-hover:translate-y-1 hover:text-blue-700 transition" />
         </a>
         <a
           href="https://github.com/Katemoca"
