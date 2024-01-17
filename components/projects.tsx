@@ -3,8 +3,8 @@ import SectionHeading from "./section-heading";
 
 export default function Projects() {
   return (
-    <div>
-      <SectionHeading>Projects</SectionHeading>
-    </div>
+    <section>
+      <SectionHeading>Projects i love</SectionHeading>
+    </section>
   );
 }
