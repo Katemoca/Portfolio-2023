@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function SectionDivider({ height = 1 }) {
   return (
     <motion.div
-      className="relative w-full mt-10 sm:mt-36 mb-28 sm:mb-36 flex items-center justify-center"
+      className="relative w-full mt-10 sm:mt-40 mb-20 sm:mb-28 flex items-center justify-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}>
