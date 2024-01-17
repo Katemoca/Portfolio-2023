@@ -4,9 +4,9 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
 //!IMAGES FROM THE PUBLIC FOLDER
-import corpcommentImg from "@/public/corpcomment.png";
+import healthplus from "@/public/healthplus (1).png";
 import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+
 
 export const links = [
   {
@@ -66,9 +66,9 @@ export const projectsData = [
   {
     title: "HealthPlus",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked as a frontend developer on this group project for 2 months. Users can access to a healthcare service by lmaking appointments, choosing their doctors of preference, setting the place and date for the appointments, and more.",
+    tags: ["Javascript", "React", "Firebase", "Tailwind", "Redux "],
+    imageUrl: healthplus,
   },
   {
     title: "Videogames",
@@ -77,13 +77,13 @@ export const projectsData = [
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
     imageUrl: rmtdevImg,
   },
-  {
-    title: "Countries",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
-  },
+  // {
+  //   title: "Countries",
+  //   description:
+  //     "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+  //   tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+  //   imageUrl: wordanalyticsImg,
+  // },
 ] as const;
 
 export const skillsData = [

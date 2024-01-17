@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
+import Project from "./project";
 
 export default function Projects() {
   return (
@@ -9,7 +10,9 @@ export default function Projects() {
 
       <div>
         {projectsData.map((project, index) => (
-          <React.Fragment key={index}></React.Fragment>
+          <div key={index}>
+            <Project {...project} />
+          </div>
         ))}
       </div>
     </section>
