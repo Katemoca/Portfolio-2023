@@ -1,23 +1,37 @@
 "use client";
 import SectionHeading from "./section-heading";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function About() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+
+  const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
     <motion.section
       className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-28 mt-20 sm:mt-8 mb-28 sm:mb-2 text-center leading-8"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}>
+      transition={{ delay: 0.175 }}
+      ref={ref}
+      style={{
+        scale: scaleProgess,
+        opacity: opacityProgess,
+      }}>
       <div className="relative z-10">
         <SectionHeading>About</SectionHeading>
-        <p className="mb-3 mt-8 text-wrap px-3">
+        <p className="mb-3 mt-8 text-wrap px-3 text-lg sm:text-xl">
           After graduating with a degree in
-          <span className="font-medium text-wrap">{` Spanish and Foreign Languages (English and French)`}</span>
+          <span className="text-wrap">{` Spanish and Foreign Languages (English and French)`}</span>
           . I decided to pursue my passion for programming. I enrolled in a
           coding bootcamp{" "}
           <a
-            className="font-medium hover:text-xl"
+            className="text-wrap text-xl"
             href="https://www.soyhenry.com/"
             target="_blank">{`(Soy Henry)`}</a>{" "}
           and learnt{" "}
@@ -48,11 +62,11 @@ export default function About() {
           <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
             PostgreSQL
           </span>
-          ,
+          ,{" "}
           <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
             PostgreSQL
           </span>
-          ,
+          ,{" "}
           <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
             Express.js
           </span>

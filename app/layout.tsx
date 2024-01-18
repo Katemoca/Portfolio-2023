@@ -35,3 +35,5 @@ export default function RootLayout({
 }
 
 //! The {children} of the layout.tsx file is page.tsx
+
+// The !scroll-smooth class is a utility class in Tailwind CSS that applies scroll-behavior: smooth; to an element. This makes the scroll behavior of the element smooth, meaning it will smoothly transition from one part of the page to another when you click on a link that targets an anchor on the page12. The ! before scroll-smooth is used to make this class important, overriding any potential conflicts from other classes.
