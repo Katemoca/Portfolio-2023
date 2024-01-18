@@ -1,14 +1,17 @@
 // This instructs Next.js to treat the file as a client-side component, allowing you to use the "<motion.div>" component without encountering issues during the server-side rendering process.
 "use client"; // 'use client' lets you mark what code runs on the client. These client components are pre-rendered on the server.
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 //! NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
+import clsx from "clsx";
 
 export default function Header() {
+  const [activeSection, setActiveSection] = useState("Home");
+
   return (
     <header className={`${roboto_mono.className} z-[999] relative`}>
       <motion.div
@@ -26,9 +29,24 @@ export default function Header() {
               animate={{ y: 0, opacity: 3 }}>
               <Link
                 href={link.hash}
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-600 dark:hover:text-purple-700">
+                className={clsx(
+                  "flex w-full items-center justify-center px-3 py-3 transition hover:text-purple-700",
+                  { "text-gray-950": activeSection === link.name }
+                )}
+                onClick={() => {}}>
                 {link.name}
               </Link>
+
+              {link.name === activeSection && (
+                <motion.span
+                  className="bg-gray-100 rounded-full absolute inset-0 -z-10"
+                  layoutId="activeSection"
+                  transition={{
+                    type: "spring",
+                    stiffness: 380,
+                    damping: 30,
+                  }}></motion.span>
+              )}
             </motion.li>
           ))}
         </ul>
@@ -56,5 +74,10 @@ On NEXT.JS: https://www.youtube.com/watch?v=vwSlYG7hFk0&t=10s
 On NEXT.JS: https://www.youtube.com/watch?v=ZVnjOPwW4ZA
 
 To make it a toggle with frame motion: using "variants": https://www.framer.com/motion/examples/
+
+
+
+CLSX => It's mostly used for conditionally applyind "classNames" with Tailwind css. 
+
 
 */

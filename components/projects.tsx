@@ -5,7 +5,7 @@ import Project from "./project";
 
 export default function Projects() {
   return (
-    <section className="scroll-mt-28 mt-28 sm:mt-20 mb-28">
+    <section className="scroll-mt-28 mt-28 sm:mt-20 mb-28" id="projects">
       <SectionHeading>Projects i love</SectionHeading>
 
       <div>

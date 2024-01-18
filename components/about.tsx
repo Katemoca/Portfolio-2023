@@ -14,7 +14,7 @@ export default function About() {
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   return (
     <motion.section
-      className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-28 mt-20 sm:mt-8 mb-28 sm:mb-2 text-center leading-8"
+      className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-8 mb-28 sm:mb-2 text-center leading-8"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -22,7 +22,8 @@ export default function About() {
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,
-      }}>
+      }}
+      id="about">
       <div className="relative z-10">
         <SectionHeading>About</SectionHeading>
         <p className="mb-3 mt-8 text-wrap px-3 text-lg sm:text-xl">
