@@ -7,11 +7,17 @@ import { links } from "@/lib/data";
 //! NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
-import clsx from "clsx";
+import clsx from "clsx"; // This is a package for Tailwind CSS
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState<string>("Home"); // Everytime you need to keep track of something you gotta use STATE
 
+  const handleActiveSection = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    const { textContent } = event.currentTarget;
+    if (textContent) {
+      setActiveSection(textContent);
+    }
+  };
   return (
     <header className={`${roboto_mono.className} z-[999] relative`}>
       <motion.div
@@ -31,9 +37,9 @@ export default function Header() {
                 href={link.hash}
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 transition hover:text-purple-700",
-                  { "text-gray-950": activeSection === link.name }
+                  { "text-purple-950": activeSection === link.name }
                 )}
-                onClick={() => {}}>
+                onClick={handleActiveSection}>
                 {link.name}
               </Link>
 
