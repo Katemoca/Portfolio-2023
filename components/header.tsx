@@ -1,23 +1,18 @@
-// This instructs Next.js to treat the file as a client-side component, allowing you to use the "<motion.div>" component without encountering issues during the server-side rendering process.
-"use client"; // 'use client' lets you mark what code runs on the client. These client components are pre-rendered on the server.
+"use client"; // These client components are pre-rendered on the server.
 
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 //! NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
 import clsx from "clsx"; // This is a package for Tailwind CSS
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
-  const [activeSection, setActiveSection] = useState<string>("Home"); // Everytime you need to keep track of something you gotta use STATE
+  // We need to use the hook useContext to use the corresponded context
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
-  const handleActiveSection = (event: React.MouseEvent<HTMLAnchorElement>) => {
-    const { textContent } = event.currentTarget;
-    if (textContent) {
-      setActiveSection(textContent);
-    }
-  };
   return (
     <header className={`${roboto_mono.className} z-[999] relative`}>
       <motion.div
@@ -39,7 +34,9 @@ export default function Header() {
                   "flex w-full items-center justify-center px-3 py-3 transition hover:text-purple-700",
                   { "text-purple-950": activeSection === link.name }
                 )}
-                onClick={handleActiveSection}>
+                onClick={() => {
+                  setActiveSection(link.name);
+                }}>
                 {link.name}
               </Link>
 
