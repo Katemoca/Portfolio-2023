@@ -1,6 +1,7 @@
 "use client";
 import SectionHeading from "./section-heading";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import { useRef } from "react";
 
 export default function About() {
@@ -31,10 +32,10 @@ export default function About() {
           <span className="text-wrap">{` Spanish and Foreign Languages (English and French)`}</span>
           . I decided to pursue my passion for programming. I enrolled in a
           coding bootcamp{" "}
-          <a
+          <Link
             className="text-wrap text-xl"
             href="https://www.soyhenry.com/"
-            target="_blank">{`(Soy Henry)`}</a>{" "}
+            target="_blank">{`(Soy Henry)`}</Link>{" "}
           and learnt{" "}
           <span className="font-bold">full-stack web development</span>.
           <span>

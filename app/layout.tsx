@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className=" !scroll-auto sm:!scroll-smooth">
       <body
         className={`${inter.className} bg-purple-100 text-gray-950 relative pt-28 sm:pt-28`}>
         {/* DIVS ON THE RIGHT CORNER */}
