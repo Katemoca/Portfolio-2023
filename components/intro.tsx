@@ -1,20 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
 import { motion } from "framer-motion";
 import imgProfile from "@/public/imgprofile2.jpg";
-//! NEXT GOOGLE FONTS
+// NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
-//! REACT ICONS
+// REACT ICONS
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function Intro() {
+  const { ref } = useSectionInView("Home");
+
   return (
     <section
+      ref={ref}
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-4 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">

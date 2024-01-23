@@ -36,6 +36,7 @@ export default function Header() {
                 )}
                 onClick={() => {
                   setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
                 }}>
                 {link.name}
               </Link>

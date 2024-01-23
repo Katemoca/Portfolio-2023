@@ -1,25 +1,32 @@
 "use client";
+
 import SectionHeading from "./section-heading";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { useSectionInView } from "@/lib/hooks";
+import mergeRefs from "@/lib/mergeRefs";
 
 export default function About() {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref } = useSectionInView("About");
+
+  //Scroll effect by using FRAMER MOTION and the hook useRef by React.
+  const scrollEffectRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
+    target: scrollEffectRef,
     offset: ["0 1", "1.33 1"],
   });
-
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  // Elements of the "about" component
   return (
     <motion.section
+      ref={mergeRefs<HTMLDivElement>(ref, scrollEffectRef)}
       className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-8 mb-28 sm:mb-2 text-center leading-8"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      ref={ref}
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,

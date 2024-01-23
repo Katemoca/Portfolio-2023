@@ -40,7 +40,6 @@ export default function ActiveSectionContextProvider({
 }
 
 // We create a custom hook to use the Context with the useContext hook provided by React.
-
 export function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
   if (context === null) {
