@@ -5,3 +5,7 @@
 html {
   --line-color: #e5e7eb;
 }
+
+.borderPurple {
+  @apply border-2 border-purple-700;
+}

@@ -11,9 +11,12 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <section
@@ -151,7 +154,13 @@ export default function Intro() {
           href={"#contact"}
           className="group bg-green-300  text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 active:scale-105 transition">
           Contact me
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50" />
+          <BsArrowRight
+            className="opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+            onClick={() => {
+              setActiveSection("Contact");
+              setTimeOfLastClick(Date.now());
+            }}
+          />
         </Link>
         <a
           href="/CV.pdf"

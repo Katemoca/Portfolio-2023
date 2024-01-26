@@ -2,7 +2,7 @@
 
 // import React from "react";
 //! NEXT GOOGLE FONTS
-import { roboto_mono, inter } from "@/app/fonts";
+import { roboto_mono } from "@/app/fonts";
 
 type SectionHeadingProps = {
   children: React.ReactNode;
