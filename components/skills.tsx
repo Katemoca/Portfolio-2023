@@ -40,7 +40,7 @@ export default function Skills() {
             }}
             custom={index}
             key={index}
-            className="bg-white border-purple-700 border-2 px-5 py-5 rounded-xl">
+            className="bg-white borderPurple px-5 py-5 rounded-xl">
             {skill}
           </motion.li>
         ))}
@@ -57,7 +57,7 @@ export default function Skills() {
             }}
             custom={index}
             key={index}
-            className="bg-white border-purple-700 border-2 px-5 py-5 rounded-xl">
+            className="bg-white borderPurple px-5 py-5 rounded-xl">
             {skill}
           </motion.li>
         ))}

@@ -172,13 +172,13 @@ export default function Intro() {
         <a
           href="https://github.com/Katemoca"
           target="_blank"
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.3rem] rounded-full focus:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack">
+          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.3rem] rounded-full focus:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderPurple">
           <FaGithubSquare />
         </a>
         <a
           href="https://www.linkedin.com/in/katerincastromongua/"
           target="_blank"
-          className="bg-white p-4 text-gray-700  hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack">
+          className="bg-white p-4 text-gray-700  hover:text-gray-950 text-[1.2rem] flex items-center gap-2 rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer borderPurple">
           <BsLinkedin />
         </a>
       </motion.div>

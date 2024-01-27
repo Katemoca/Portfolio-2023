@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { roboto_mono } from "@/app/fonts";
 import { motion } from "framer-motion";
+import { sendEmail } from "@/actions/sendEmails";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -24,21 +25,30 @@ export default function Contact() {
       <p className="text-black -mt-6">
         You can contact me directly at{" "}
         <a
-          className="hover:text-purple-700"
+          className="hover:text-purple-700 font-bold"
           href="mailto:katerinmonguacastro@gmail.com">
           katerinmonguacastro@gmail.com
         </a>{" "}
         or here.
       </p>
-      <form className="mt-10 flex flex-col">
+      <form
+        className="mt-10 flex flex-col"
+        action={async (formData) => {
+          await sendEmail(formData);
+        }}>
         <input
           className="h-14 px-4 rounded-lg borderPurple"
-          placeholder="Your email"></input>
+          name="senderEmail"
+          placeholder="Your email"
+          required
+          type="email"
+          maxLength={500}></input>
         <textarea
           className="h-52 my-3 borderPurple px-2 py-2 rounded-lg"
           name="message"
           placeholder="Write your message here"
           required
+          maxLength={500}
         />
         <div className="flex items-center justify-center">
           <button
