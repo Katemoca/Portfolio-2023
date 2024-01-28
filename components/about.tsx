@@ -23,7 +23,7 @@ export default function About() {
   return (
     <motion.section
       ref={mergeRefs<HTMLDivElement>(ref, scrollEffectRef)}
-      className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-8 mb-28 sm:mb-2 text-center leading-8"
+      className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

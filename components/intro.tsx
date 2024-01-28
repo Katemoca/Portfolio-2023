@@ -128,7 +128,7 @@ export default function Intro() {
         </div>
       </div>
       <motion.h1
-        className={`${roboto_mono.className} font-normal mb-10 mt-8  px-4 text-2xl !leading-[1.1] sm:text-2xl lg:!leading-[1.2]`}
+        className={`${roboto_mono.className} font-normal mb-10 mt-8  px-4 text-2xl !leading-[1.1] sm:text-4xl lg:!leading-[1.2]`}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.1 }}>

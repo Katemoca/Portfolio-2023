@@ -48,7 +48,7 @@ export default function Contact() {
           name="message"
           placeholder="Write your message here"
           required
-          maxLength={500}
+          maxLength={5000}
         />
         <div className="flex items-center justify-center">
           <button

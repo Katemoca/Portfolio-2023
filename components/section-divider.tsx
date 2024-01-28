@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 export default function SectionDivider({ height = 1 }) {
   return (
     <motion.div
-      className="relative w-full mt-10 sm:mt-40 mb-20 sm:mb-28 flex items-center justify-center"
+      className="relative w-full mt-10 sm:mt-28 mb-20 sm:mb-28 flex items-center justify-center"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.125 }}>
       {/* Left wave */}
       {/* <svg
-        className={`absolute w-1/3 h-${height} left-0 top-1/2 transform -translate-y-1/2`}
+        className={`absolute w-1/2 h-${height} left-0 top-1/2 transform -translate-y-1/2 -z-10`}
         viewBox="0 0 100 100"
         preserveAspectRatio="none">
         <path
@@ -22,11 +22,11 @@ export default function SectionDivider({ height = 1 }) {
         />
       </svg> */}
       {/* Left vertical line */}
-      <div className="bg-green-300 bg-opacity-45 h-16 w-1 rounded-full mr-4 -translate-y-24 translate-x-10 "></div>
+      {/* <div className="bg-green-300 bg-opacity-45 h-8 w-1 rounded-full mr-4 -translate-y-20 translate-x-20 "></div> */}
 
       {/* Flower in the middle */}
       <motion.span
-        className="text-4xl"
+        className="text-6xl"
         initial={{ scale: 0 }}
         animate={{ rotate: 360, scale: 1 }}
         transition={{
@@ -39,10 +39,10 @@ export default function SectionDivider({ height = 1 }) {
       </motion.span>
 
       {/* Right vertical line */}
-      <div className="bg-green-300 bg-opacity-45 h-16 w-1 rounded-full ml-4 translate-y-24 -translate-x-10"></div>
+      {/* <div className="bg-green-300 bg-opacity-45 h-8 w-1 rounded-full ml-4 translate-y-20 -translate-x-9"></div> */}
       {/* Right wave */}
       {/* <svg
-        className={`absolute w-1/3 h-${height} right-0 top-1/2 transform -translate-y-1/2`}
+        className={`absolute w-1/2 h-${height} right-0 top-1/2 transform -translate-y-1/2 -z-10`}
         viewBox="0 0 100 100"
         preserveAspectRatio="none">
         <path
