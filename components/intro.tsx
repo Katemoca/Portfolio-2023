@@ -24,108 +24,32 @@ export default function Intro() {
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-4 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
-        <div className="relative">
-          <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ type: "tween", duration: 0.2 }}>
-            <Image
-              src={imgProfile}
-              alt="Katerin image profile"
-              width="195"
-              height="195"
-              quality="95"
-              priority={true}
-              className="h-40 w-40 rounded-full object-cover shadow-xl border-white border-[0.35rem]"
-            />
-          </motion.div>
-          <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2 text-4xl -space-x-3 hidden sm:flex">
-            <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg  sm:text-2xl text-white font-extrabold`}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              2
-            </motion.span>
-            <motion.span
-              className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              💐
-            </motion.span>
-            <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mx-2 sm:text-2xl text-white font-extrabold`}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              0️
-            </motion.span>
-            <motion.span
-              className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              💐
-            </motion.span>
-            <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mx-2 sm:text-2xl text-white font-extrabold`}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              2️
-            </motion.span>
-            <motion.span
-              className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              💐
-            </motion.span>
-            <motion.span
-              className={` ${roboto_mono.className} bg-[#007BFF] px-3 py-1 rounded-lg mx-2 sm:text-2xl text-white font-extrabold`}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 125,
-                delay: 0.1,
-                duration: 0.7,
-              }}>
-              4️
-            </motion.span>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ type: "tween", duration: 0.2 }}>
+          <Image
+            src={imgProfile}
+            alt="Katerin image profile"
+            width="195"
+            height="195"
+            quality="95"
+            priority={true}
+            className="h-40 w-40 rounded-full object-cover shadow-xl border-white border-[0.15rem]"
+          />
+        </motion.div>
+        <motion.span
+          className="px-3 py-1 rounded-lg mx-2 sm:text-2xl"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 125,
+            delay: 0.1,
+            duration: 0.7,
+          }}>
+          💐
+        </motion.span>
       </div>
       <motion.h1
         className={`${roboto_mono.className} font-normal mb-10 mt-8  px-4 text-2xl !leading-[1.1] sm:text-4xl lg:!leading-[1.2]`}
