@@ -3,7 +3,7 @@
 import SectionHeading from "./section-heading";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useSectionInView } from "@/lib/hooks";
 import mergeRefs from "@/lib/mergeRefs";
 

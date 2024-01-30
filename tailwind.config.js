@@ -21,5 +21,13 @@ module.exports = {
       },
     },
   },
+
+  theme: {
+    extend: {
+      screens: {
+        "md-custom": "905px",
+      },
+    },
+  },
   plugins: [],
 };
