@@ -23,7 +23,7 @@ export default function About() {
   return (
     <motion.section
       ref={mergeRefs<HTMLDivElement>(ref, scrollEffectRef)}
-      className="w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8"
+      className="w-[28rem] sm-custom:w-[35rem] h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -90,7 +90,7 @@ export default function About() {
           as a software developer.
         </p>
       </div>
-      <div className="absolute w-[35rem] h-[35rem] rounded-full border-green-300 border-8 border-solid bg-gradient-to-tr from-purple-400 via-pink-300 to-purple-400 blur-[60px] z-1 -translate-x-[12px] -translate-y-[500px]"></div>
+      <div className="absolute w-[28rem] sm-custom:w-[35rem] h-[35rem] rounded-full border-green-300 border-8 border-solid bg-gradient-to-tr from-purple-400 via-pink-300 to-purple-400 blur-[60px] z-1 -translate-x-[12px] -translate-y-[500px]"></div>
     </motion.section>
   );
 }

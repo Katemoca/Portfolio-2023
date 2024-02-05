@@ -25,7 +25,7 @@ export default function Contact() {
       <p className="text-black -mt-6">
         You can contact me directly at{" "}
         <a
-          className="hover:text-purple-700 font-bold"
+          className="hover:text-white font-bold"
           href="mailto:katerinmonguacastro@gmail.com">
           katerinmonguacastro@gmail.com
         </a>{" "}
@@ -53,7 +53,7 @@ export default function Contact() {
         <div className="flex items-center justify-center">
           <button
             type="submit"
-            className="group h-[3rem] w-[8rem] bg-purple-700 rounded-full text-white outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-purple-950 active:scale-105">
+            className="group h-[3rem] w-[8rem] bg-purple-100 rounded-full text-purple-950 outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-purple-950 hover:text-white active:scale-105">
             Submit
           </button>
         </div>

@@ -9,3 +9,7 @@ html {
 .borderPurple {
   @apply border-2 border-purple-700;
 }
+
+.gradient-background {
+  background: linear-gradient(150deg, #742793c5, #5411ffc7);
+}
