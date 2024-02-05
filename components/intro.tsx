@@ -72,7 +72,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className={`${roboto_mono.className} md-custom:flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic `}
+        className={`${roboto_mono.className} sm-custom:flex md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic `}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "tween", duration: 0.2 }}>
@@ -120,12 +120,20 @@ export default function Intro() {
             <HiDownload className="opacity-80 group-hover:translate-y-1 hover:text-blue-700 transition" />
           </a>
         </motion.div>
-        <a
-          href="https://www.linkedin.com/in/katerincastromongua/"
-          target="_blank"
-          className="bg-white p-4 text-gray-700  hover:text-gray-950 text-[1.2rem] flex items-center gap-2 rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer">
-          <BsLinkedin />
-        </a>
+        <motion.div
+          className={`${roboto_mono.className} flex flex-col items-center justify-center gap-3 px-4 text-lg font-medium mt-5`}
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.105,
+          }}>
+          <a
+            href="https://www.linkedin.com/in/katerincastromongua/"
+            target="_blank"
+            className="bg-white p-4 text-gray-700  hover:text-gray-950 text-[1.2rem] flex items-center gap-2 rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer">
+            <BsLinkedin />
+          </a>
+        </motion.div>
       </motion.div>
     </section>
   );

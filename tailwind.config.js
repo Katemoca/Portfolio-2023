@@ -25,7 +25,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        "md-custom": "905px",
+        "sm-custom": "700px",
+        "md-custom": "965px",
       },
     },
   },
