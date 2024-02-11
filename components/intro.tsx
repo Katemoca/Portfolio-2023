@@ -15,14 +15,13 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem]  md-custom:max-w-[63rem] text-center md-custom:mb-4 scroll-mt-[100rem]">
+      className="mb-16 max-w-[50rem]  md-custom:max-w-[63rem] text-center md-custom:mb-4 scroll-mt-[100rem]">
       <div className="md-custom:flex md-custom:flex-auto md-custom:mb-10">
         <div className="flex justify-center items-center md-custom:w-[45%]">
           <div className="relative">
@@ -55,11 +54,14 @@ export default function Intro() {
           </div>
         </div>
         <motion.h1
-          className={`${roboto_mono.className} md-custom:w-[65%] font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] md-custom:text-3xl lg:!leading-[1.2]`}
+          className={`${roboto_mono.className} md-custom:w-[65%] font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] md-custom:text-3xl xl:!leading-[1.2] xl:text-right`}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "tween", duration: 0.2 }}>
-          <span className="font-bold">{`Hi, I'm Katerin Castro. `}</span>
+          <span>
+            {`Hello there! I'm  `}{" "}
+            <span className="font-extrabold">Katerin Castro.</span>
+          </span>
           {`I'm a `}
           <span className="font-bold">{`full-stack developer `}</span>
           with
@@ -72,12 +74,12 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className={`${inter.className} sm-custom:flex md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic`}
+        className={`${inter.className} flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic`}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "tween", duration: 0.2 }}>
-        <div className="mt-10 md-custom:-mt-16 lg:-z-10 lg:-translate-y-45 lg:-mt-72 lg:-translate-x-40">
-          <span className="md-custom:text-[15rem] md-custom:font-extralight italic my-0">
+        <div className="mt-10 md-custom:-mt-12 -z-10 xl:-translate-y-45 xl:-mt-72 xl:-translate-x-40">
+          <span className="md-custom:text-[5rem] xl:text-[15rem] md-custom:font-extralight italic my-0">
             K<span className="md-custom:hidden translate-x-16">atemoca</span>
           </span>
           <span className="md-custom:inline-flex hidden my-0">ate</span>
@@ -85,7 +87,7 @@ export default function Intro() {
           <a
             href="https://github.com/Katemoca"
             target="_blank"
-            className="hidden lg:-my-7 md-custom:flex items-center md-custom:translate-x-40 text-[1.3rem] rounded-full focus:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer">
+            className="hidden md-custom:mt-6 xl:-my-7 md-custom:flex items-center md-custom:translate-x-40 text-[1.3rem] rounded-full focus:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer">
             <span className="md-custom:text-8xl md-custom:italic">m </span>
             <FaGithub className="md-custom:text-6xl md-custom:translate-y-3 md-custom:translate-x-3" />
             <span className="md-custom:text-8xl md-custom:translate-x-3 md-custom:italic">
@@ -102,7 +104,7 @@ export default function Intro() {
           }}>
           <div className="md:-translate-x-20 w-auto">
             <Link
-              href={"#contact"}
+              href="#contact"
               className="group bg-green-300 lg:w-[300px] lg:justify-center lg:items-center text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 active:scale-105 transition">
               Contact me
               <BsArrowRight
@@ -114,7 +116,7 @@ export default function Intro() {
               />
             </Link>
           </div>
-          <div className="translate-x-40">
+          <div className="md-custom:translate-x-40">
             <a
               href="/CV.pdf"
               download
@@ -134,7 +136,7 @@ export default function Intro() {
           <a
             href="https://www.linkedin.com/in/katerincastromongua/"
             target="_blank"
-            className="bg-white p-4 text-gray-700 md:text-4xl hover:text-gray-950 text-[1.2rem] flex items-center justify-center  rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer h-90 w-90">
+            className="bg-white p-4 text-pink-600 md:text-4xl hover:text-gray-950 text-[1.2rem] flex items-center justify-center  rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer h-90 w-90">
             <BsLinkedin />
           </a>
         </motion.div>

@@ -6,6 +6,8 @@ import { useSectionInView } from "@/lib/hooks";
 import { roboto_mono } from "@/app/fonts";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmails";
+// import { FaPaperPlane } from "react-icons/fa";
+import { CiLocationArrow1 } from "react-icons/ci";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -55,6 +57,8 @@ export default function Contact() {
             type="submit"
             className="group h-[3rem] w-[8rem] bg-purple-100 rounded-full text-purple-950 outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-purple-950 hover:text-white active:scale-105">
             Submit
+            {/* <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" /> */}
+            <CiLocationArrow1 className="text-md opacity-70 transition-all group-hover:text-xs  group-hover:translate-x-1 group-hover:-translate-y-1" />
           </button>
         </div>
       </form>
