@@ -6,8 +6,8 @@ import { useSectionInView } from "@/lib/hooks";
 import { roboto_mono } from "@/app/fonts";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmails";
-// import { FaPaperPlane } from "react-icons/fa";
-import { CiLocationArrow1 } from "react-icons/ci";
+import SubmitBtn from "./submit-btn";
+import toast from "react-hot-toast";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
@@ -33,10 +33,18 @@ export default function Contact() {
         </a>{" "}
         or here.
       </p>
+      {/* Below we're passing a server action to a client component but as a prop with the action */}
       <form
         className="mt-10 flex flex-col"
         action={async (formData) => {
-          await sendEmail(formData);
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error(error);
+            return;
+          }
+
+          toast.success("Email sent");
         }}>
         <input
           className="h-14 px-4 rounded-lg borderPurple"
@@ -53,13 +61,7 @@ export default function Contact() {
           maxLength={5000}
         />
         <div className="flex items-center justify-center">
-          <button
-            type="submit"
-            className="group h-[3rem] w-[8rem] bg-purple-100 rounded-full text-purple-950 outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-purple-950 hover:text-white active:scale-105">
-            Submit
-            {/* <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" /> */}
-            <CiLocationArrow1 className="text-md opacity-70 transition-all group-hover:text-xs  group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </button>
+          <SubmitBtn />
         </div>
       </form>
     </motion.section>

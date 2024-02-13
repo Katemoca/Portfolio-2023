@@ -53,8 +53,8 @@ export default function Intro() {
             </motion.span>
           </div>
         </div>
-        <motion.h1
-          className={`${roboto_mono.className} md-custom:w-[65%] font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] md-custom:text-3xl xl:!leading-[1.2] xl:text-right`}
+        <motion.p
+          className={`${roboto_mono.className} md-custom:w-[65%] font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] md-custom:text-3xl xl:!leading-[1.2] xl:text-right xl:-mr-[100px]`}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "tween", duration: 0.2 }}>
@@ -70,7 +70,7 @@ export default function Intro() {
           <span className="underline">{`React.js`}</span>.{" "}
           {`I've also worked with the `}
           <span className="font-bold">MERN and PERN</span> stacks.
-        </motion.h1>
+        </motion.p>
       </div>
 
       <motion.div
