@@ -28,7 +28,7 @@ export default function ContactFormEmail({
         <Preview>New message from your portfolio site</Preview>
         <Body className="bg-purple-300 text-black">
           <Container>
-            <Section className="bg-purple-400 borderBlack my-10 px-10 py-4 rounded-md">
+            <Section className="bg-purple-400 my-10 px-10 py-4 rounded-md">
               <Heading className="leading-tight">
                 {`You received the following message from Katerin's portfolio:`}
               </Heading>

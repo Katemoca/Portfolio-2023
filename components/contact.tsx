@@ -16,7 +16,7 @@ export default function Contact() {
     <motion.section
       ref={ref}
       id="contact"
-      className={`${roboto_mono.className}scroll-mt-28 mt-28 sm:mt-20 mb-28 w-[min)(100%,38rem)] text-center`}
+      className={`${roboto_mono.className} scroll-mt-28 mt-[112px] mb-28 w-[min)(100%,38rem)] text-center`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
