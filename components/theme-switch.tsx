@@ -1,19 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import { useTheme } from "@/context/theme-context";
+import React from "react";
 import { BsSun, BsMoon } from "react-icons/bs";
 
 export default function ThemeSwitch() {
-  // We need to keep track of the STATE!!!
-  const [theme, setTheme] = useState<Theme>("light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <button

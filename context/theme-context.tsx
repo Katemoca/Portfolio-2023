@@ -27,7 +27,7 @@ export default function ThemeContextProvider({
       document.documentElement.classList.add("dark");
     } else {
       setTheme("light");
-      window.localStorage.setItem("theme", "dark");
+      window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   };
@@ -45,6 +45,16 @@ export default function ThemeContextProvider({
       document.documentElement.classList.add("dark");
     }
   }, []);
+
+  return (
+    <ThemeContext.Provider
+      value={{
+        theme,
+        toggleTheme,
+      }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 }
 
 // Here we're gonna use the FUNCTION/hook that we created before.
@@ -54,4 +64,6 @@ export function useTheme() {
   if (context === null) {
     throw new Error("useTheme must be used within a ThemeContextProvider");
   }
+
+  return context;
 }
