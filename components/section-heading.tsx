@@ -11,7 +11,7 @@ type SectionHeadingProps = {
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (
     <h2
-      className={`${roboto_mono.className} text-3xl font-medium capitalize mb-8 text-center`}>
+      className={`${roboto_mono.className} text-3xl font-medium capitalize mb-8 text-center dark:text-gray-100/60`}>
       {children}
     </h2>
   );

@@ -3,7 +3,6 @@ import { useRef } from "react"; // A React hook that creates a reference to a DO
 import { projectsData } from "@/lib/data"; // My dataset
 import { motion, useScroll, useTransform } from "framer-motion"; // useScroll => This is a function (hook)provided by Framer Motion that allows you to track the scroll progress of an element.
 import Image from "next/image";
-import { url } from "inspector";
 
 // A TypeScript type definition that extracts the type of a single project from the projectsData array.
 type ProjectProps = (typeof projectsData)[number];

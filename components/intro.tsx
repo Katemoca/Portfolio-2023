@@ -54,7 +54,7 @@ export default function Intro() {
           </div>
         </div>
         <motion.p
-          className={`${roboto_mono.className} md-custom:w-[65%] font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] md-custom:text-3xl xl:!leading-[1.2] xl:text-right xl:-mr-[100px]`}
+          className={`${roboto_mono.className} md-custom:w-[65%] font-normal mb-10 mt-8 px-4 text-2xl !leading-[1.1] md-custom:text-3xl xl:!leading-[1.2] xl:text-right xl:-mr-[100px] dark:text-gray-100/60`}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ type: "tween", duration: 0.2 }}>
@@ -74,7 +74,7 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className={`${inter.className} flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic`}
+        className={`${inter.className} flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic dark:text-gray-100/60`}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "tween", duration: 0.2 }}>
@@ -120,7 +120,7 @@ export default function Intro() {
             <a
               href="/CV.pdf"
               download
-              className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer">
+              className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer dark:bg-white/10 dark:text-white">
               Download CV
               <HiDownload className="opacity-80 group-hover:translate-y-1 hover:text-blue-700 transition" />
             </a>

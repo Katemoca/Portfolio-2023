@@ -23,7 +23,7 @@ export default function About() {
   return (
     <motion.section
       ref={mergeRefs<HTMLDivElement>(ref, scrollEffectRef)}
-      className="w-full sm-custom:w-[35rem] h-auto sm-custom:h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8"
+      className="w-full sm-custom:w-[35rem] h-auto sm-custom:h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8 dark:text-gray-100/60"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -46,7 +46,6 @@ export default function About() {
           and learnt{" "}
           <span className="font-bold">full-stack web development</span>.
           <span>
-            {" "}
             My favorite part of <span className="italic">programming</span>
           </span>{" "}
           is to solve different problems and come up with creative ideas for
@@ -55,29 +54,6 @@ export default function About() {
           <span className="italic hover:text-black rounded-full">
             React, Next.js, Node.js,MongoDB, PostgreSQL, Express.js
           </span>
-          {/* <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
-            React
-          </span>
-          ,
-          <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
-            Next.js
-          </span>
-          ,
-          <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
-            Node.js
-          </span>
-          ,
-          <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
-            MongoDB
-          </span>
-          ,
-          <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
-            PostgreSQL
-          </span>
-          ,{" "}
-          <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 hover:h-8  hover:p-2 hover:text-black rounded-full">
-            Express.js
-          </span> */}
           . {`I'm also familiar with`}{" "}
           <span className="italic hover:not-italic hover:bg-gradient-to-r from-purple-400 via-pink-500  to-purple-400 hover:bg-opacity-90 hover:h-8 hover:rounded-full hover:p-2 hover:text-black">
             Javascript and Typescript
@@ -89,7 +65,7 @@ export default function About() {
           as a software developer.
         </p>
       </div>
-      <div className="absolute w-auto sm-custom:w-[35rem] h-[35rem] rounded-full border-green-300 border-8 border-solid bg-gradient-to-tr from-purple-400 via-pink-300 to-purple-400 blur-[60px] z-1 -translate-x-[12px] -translate-y-[500px]"></div>
+      <div className="absolute w-auto sm-custom:w-[35rem] h-[35rem] rounded-full border-green-300 border-8 border-solid bg-gradient-to-tr from-purple-400 via-pink-300 to-purple-400 blur-[60px] z-1 -translate-x-[12px] -translate-y-[500px] dark:bg-gradient-to-tr dark:from-purple-800 dark:via-pink-700 dark:to-purple-400 dark:blur-[200px]"></div>
     </motion.section>
   );
 }
