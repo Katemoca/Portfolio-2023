@@ -1,7 +1,9 @@
 "use client";
 
+// We import the necessary DEPENDENCIES.
 import React, { createContext, useContext, useEffect, useState } from "react";
 
+// We define the several TYPES that we're gonna use throughtout our app.
 type Theme = "light" | "dark"; // Specific strings
 
 type ThemeContextProviderProps = {
@@ -13,8 +15,10 @@ type ThemeContextType = {
   toggleTheme: () => void;
 };
 
+// We create the context
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
+// We need to set the PROVIDER to wrap all the components in order to pass the props to them.
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
@@ -32,6 +36,7 @@ export default function ThemeContextProvider({
     }
   };
 
+  // This is to store the localTheme in the localstorage and to detect the mode of the browser/system of the computer of the user.
   useEffect(() => {
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
     if (localTheme) {

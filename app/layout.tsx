@@ -28,8 +28,8 @@ export default function RootLayout({
       <body
         className={`${inter.className} bg-purple-100 text-gray-950 relative pt-28 sm:pt-28 gradient-background`}>
         {/* DIVS ON THE RIGHT CORNER */}
-        <div className="bg-[#ffffff] absolute top-[-6rem] -z-10 sm-custom:-right-[12rem] sm-custom:h-[31.25rem] sm-custom:w-[31.25rem] sm-custom:rounded-full sm-custom:blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="bg-[#ff1bb3] absolute top-[-1rem] -z-10 left-[-36rem] h-[20.00rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="bg-[#ffffff] absolute top-[-6rem] -z-10 sm-custom:-right-[12rem] sm-custom:h-[31.25rem] sm-custom:w-[60.25rem] sm-custom:rounded-full sm-custom:blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
+        <div className="bg-[#ff1bb3] absolute top-[-1rem] -z-10 left-[-36rem] h-[20.00rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#7874a7]"></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
@@ -43,7 +43,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-//! The {children} of the layout.tsx file is page.tsx
-
-// The !scroll-smooth class is a utility class in Tailwind CSS that applies scroll-behavior: smooth; to an element. This makes the scroll behavior of the element smooth, meaning it will smoothly transition from one part of the page to another when you click on a link that targets an anchor on the page12. The ! before scroll-smooth is used to make this class important, overriding any potential conflicts from other classes.

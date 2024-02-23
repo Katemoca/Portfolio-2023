@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className={`${roboto_mono.className} z-[999] relative`}>
       <motion.div
-        className="fixed w-full top-0 left-1/2  h-[4.5rem] rounded-none bg-white bg-opacity-80 border border-white border-opacity-40 shadow-lg shadow-black/[0.10] backdrop-blur-[0.rem] sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full"
+        className="fixed w-full top-0 left-1/2  h-[4.5rem] rounded-none bg-white bg-opacity-80 border border-white border-opacity-40 shadow-lg shadow-black/[0.10] backdrop-blur-[0.rem] sm:top-6 sm:h-[3.25rem] sm:w-[40rem] sm:rounded-full dark:bg-gray-950 dark:bg-opacity-75"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}></motion.div>
 
@@ -31,7 +31,7 @@ export default function Header() {
               <Link
                 href={link.hash}
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 transition hover:text-purple-700",
+                  "flex w-full items-center justify-center px-3 py-3 transition hover:text-purple-700 dark:text-gray-400 dark:hover:text-gray-500",
                   { "text-gray-950": activeSection === link.name }
                 )}
                 onClick={() => {
@@ -43,7 +43,7 @@ export default function Header() {
 
               {link.name === activeSection && (
                 <motion.span
-                  className="bg-pink-300 rounded-full absolute inset-0 -z-10"
+                  className="bg-pink-300 dark:bg-gray-600 dark:bg-opacity-15 rounded-full absolute inset-0 -z-10"
                   layoutId="activeSection"
                   transition={{
                     type: "spring",
