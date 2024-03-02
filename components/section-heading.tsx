@@ -1,6 +1,5 @@
 "use client";
 
-// import React from "react";
 //! NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 

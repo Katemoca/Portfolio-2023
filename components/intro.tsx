@@ -74,13 +74,16 @@ export default function Intro() {
       </div>
 
       <motion.div
-        className={`${inter.className} flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic dark:text-gray-100/60`}
+        className={`${inter.className} flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic dark:text-purple-400/80`}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ type: "tween", duration: 0.2 }}>
-        <div className="mt-10 md-custom:-mt-12 -z-10 xl:-translate-y-45 xl:-mt-72 xl:-translate-x-40">
-          <span className="md-custom:text-[5rem] xl:text-[15rem] md-custom:font-extralight italic my-0">
-            K<span className="md-custom:hidden translate-x-16">atemoca</span>
+        <div className="mt-5 mb-5 md-custom:-mt-12 -z-10 xl:-translate-y-45 xl:-mt-72 xl:-translate-x-40">
+          <span className="text-[24px]  md-custom:text-[5rem] xl:text-[15rem] md-custom:font-extralight italic my-0">
+            K
+            <span className="md-custom:hidden translate-x-16 text-2xl">
+              atemoca
+            </span>
           </span>
           <span className="md-custom:inline-flex hidden my-0">ate</span>
 
@@ -105,7 +108,7 @@ export default function Intro() {
           <div className="md:-translate-x-20 w-auto">
             <Link
               href="#contact"
-              className="group bg-green-300 lg:w-[300px] lg:justify-center lg:items-center text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 active:scale-105 transition">
+              className="group bg-green-300 lg:w-[300px] lg:justify-center lg:items-center text-white px-7 py-3 rounded-full flex items-center gap-2 outline-none focus:scale-110 hover:scale-105 active:scale-105 transition dark:bg-green-300/20">
               Contact me
               <BsArrowRight
                 className=" text-white opacity-70 group-hover:translate-x-1 rounded-full h-6 w-6 transition focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50"
@@ -120,7 +123,7 @@ export default function Intro() {
             <a
               href="/CV.pdf"
               download
-              className="bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer dark:bg-white/10 dark:text-white">
+              className="bg-white/80 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer dark:bg-white/10 dark:text-white">
               Download CV
               <HiDownload className="opacity-80 group-hover:translate-y-1 hover:text-blue-700 transition" />
             </a>
@@ -136,7 +139,7 @@ export default function Intro() {
           <a
             href="https://www.linkedin.com/in/katerincastromongua/"
             target="_blank"
-            className="bg-white p-4 text-pink-600 md:text-4xl hover:text-gray-950 text-[1.2rem] flex items-center justify-center  rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer h-90 w-90">
+            className="bg-pink-100 p-4 text-pink-600 md:text-4xl hover:text-gray-950 text-[1.2rem] flex items-center justify-center  rounded-full focus:scale-[1.15] active:scale-105 transition cursor-pointer h-90 w-90 dark:bg-white/10 dark:text-pink-600/60">
             <BsLinkedin />
           </a>
         </motion.div>

@@ -13,7 +13,7 @@ export default function Projects() {
       ref={ref}
       className="scroll-mt-28 mt-28 sm:mt-20 mb-20 sm:mb-16"
       id="projects">
-      <SectionHeading>Projects i love</SectionHeading>
+      <SectionHeading>Projects</SectionHeading>
 
       <div>
         {projectsData.map((project, index) => (

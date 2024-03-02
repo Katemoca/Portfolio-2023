@@ -1,12 +1,11 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 
-//!IMAGES FROM THE PUBLIC FOLDER
+//IMAGES FROM THE PUBLIC FOLDER
 import healthplus from "@/public/healthplus (1).png";
 import videogames from "@/public/videogames.png";
-import { url } from "inspector";
+
 
 
 export const links = [
@@ -45,14 +44,7 @@ export const experiencesData = [
     icon: React.createElement(LuGraduationCap),
     date: "2022-2023",
   },
-  // {
-  //   title: "Front-End Developer",
-  //   location: "Orlando, FL",
-  //   description:
-  //     "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-  //   icon: React.createElement(CgWorkAlt),
-  //   date: "2019 - 2021",
-  // },
+
   {
     title: "Full-Stack Developer",
     location: "Beltsville, MD",
