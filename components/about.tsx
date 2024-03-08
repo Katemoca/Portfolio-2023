@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { useSectionInView } from "@/lib/hooks";
 import mergeRefs from "@/lib/mergeRefs";
+import { roboto_mono } from "@/app/fonts";
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -23,7 +24,7 @@ export default function About() {
   return (
     <motion.section
       ref={mergeRefs<HTMLDivElement>(ref, scrollEffectRef)}
-      className="w-full sm-custom:w-[35rem] h-auto sm-custom:h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8 dark:text-gray-100/60"
+      className={`${roboto_mono.className} w-full sm-custom:w-[35rem] h-auto sm-custom:h-[35rem] rounded-full px-6 py-6 scroll-mt-32 mt-20 sm:mt-2 mb-28 sm:mb-2 text-center leading-8 dark:text-white`}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

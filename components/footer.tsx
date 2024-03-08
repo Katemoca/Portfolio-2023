@@ -1,6 +1,10 @@
+// NEXT GOOGLE FONTS
+import { roboto_mono } from "@/app/fonts";
+
 export default function Footer() {
   return (
-    <footer className="mb-10 px-4 text-center text-black dark:text-gray-100/60">
+    <footer
+      className={`${roboto_mono.className} bg-green-300  dark:bg-green-300/30 py-4 px-4 text-center text-white dark:text-gray-100/60`}>
       <small className="mb-2 block text-xs">
         &copy; 2030 Katerin Castro. All rights reserved.
       </small>

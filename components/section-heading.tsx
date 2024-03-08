@@ -1,6 +1,6 @@
 "use client";
 
-//! NEXT GOOGLE FONTS
+// NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 
 type SectionHeadingProps = {

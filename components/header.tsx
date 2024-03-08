@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
-//! NEXT GOOGLE FONTS
+// NEXT GOOGLE FONTS
 import { roboto_mono } from "@/app/fonts";
 import Link from "next/link";
 import clsx from "clsx"; // This is a package for Tailwind CSS

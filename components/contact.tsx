@@ -24,7 +24,7 @@ export default function Contact() {
         once: true,
       }}>
       <SectionHeading>Contact me</SectionHeading>
-      <p className="text-black -mt-6">
+      <p className="text-black -mt-6 dark:text-white">
         You can contact me directly at{" "}
         <a
           className="hover:text-white font-bold"
@@ -47,14 +47,14 @@ export default function Contact() {
           toast.success("Email sent");
         }}>
         <input
-          className="h-14 px-4 rounded-lg borderPurple"
+          className="h-14 px-4 rounded-lg borderPurple dark:bg-white/10 dark:text-white"
           name="senderEmail"
           placeholder="Your email"
           required
           type="email"
           maxLength={500}></input>
         <textarea
-          className="h-52 my-3 borderPurple px-2 py-2 rounded-lg"
+          className="h-52 my-3 borderPurple px-2 py-2 rounded-lg dark:bg-white/10 dark:text-white"
           name="message"
           placeholder="Write your message here"
           required

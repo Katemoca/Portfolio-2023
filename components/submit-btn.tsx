@@ -8,7 +8,7 @@ export default function SubmitBtn() {
     <div>
       <button
         type="submit"
-        className="group h-[3rem] w-[8rem] bg-purple-100 rounded-full text-purple-950 outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-purple-950 hover:text-white active:scale-105"
+        className="group h-[3rem] w-[8rem] bg-purple-100 rounded-full text-purple-950 outline-none transition-all flex items-center justify-center gap-2 focus:scale-110 hover:scale-110 hover:bg-purple-950 hover:text-white active:scale-105 dark:bg-white/10 dark:text-white dark:hover:bg-purple-700/10"
         disabled={pending}>
         {pending ? (
           <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>

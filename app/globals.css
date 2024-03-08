@@ -6,6 +6,10 @@ html {
   --line-color: #e5e7eb;
 }
 
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.467);
+}
+
 .borderPurple {
   @apply border-2 border-purple-700;
 }
@@ -16,4 +20,8 @@ html {
 /* Dark mode */
 .dark .gradient-background {
   background: linear-gradient(150deg, #29313e, #2c3156);
+}
+
+.timeline {
+  font-family: "roboto_mono", monospace;
 }

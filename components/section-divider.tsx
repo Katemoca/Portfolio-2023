@@ -26,7 +26,7 @@ export default function SectionDivider({ height = 1 }) {
       }}>
       {/* Flower in the middle */}
       <motion.span
-        className="text-9xl"
+        className="text-9xl dark:opacity-45"
         initial={{ scale: 0 }}
         animate={{ rotate: 360, scale: 1 }}
         transition={{
