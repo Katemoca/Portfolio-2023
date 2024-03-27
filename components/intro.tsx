@@ -12,16 +12,22 @@ import { FaGithub } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useTranslations } from "next-intl";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const translated = useTranslations("Index");
 
   return (
     <section
       ref={ref}
       id="home"
       className="mb-16 max-w-[50rem]  md-custom:max-w-[63rem] text-center md-custom:mb-4 scroll-mt-[100rem]">
+      <div>
+        <h1>{translated("title")}</h1>
+        <h2>{translated("description")}</h2>
+      </div>
       <div className="md-custom:flex md-custom:flex-auto md-custom:mb-10">
         <div className="flex justify-center items-center md-custom:w-[45%]">
           <div className="relative">
@@ -72,7 +78,6 @@ export default function Intro() {
           <span className="font-bold">MERN and PERN</span> stacks.
         </motion.p>
       </div>
-
       <motion.div
         className={`${inter.className} flex flex-col md-custom:flex-row justify-center items-center md-custom:justify-between md-custom:text-6xl italic dark:text-purple-400/80`}
         initial={{ opacity: 0, scale: 0 }}

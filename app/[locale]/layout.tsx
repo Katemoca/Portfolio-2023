@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
+import Switcher from "@/components/switcher";
 
 export const inter = Inter({
   subsets: ["latin"],
@@ -20,11 +21,13 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
   return (
-    <html lang="en" className="!scroll-auto sm:!scroll-smooth">
+    <html lang={locale} className="!scroll-auto sm:!scroll-smooth">
       <body
         className={`${inter.className} bg-purple-100 text-gray-950 relative pt-28 sm:pt-28 gradient-background`}>
         {/* DIVS ON THE RIGHT CORNER */}
@@ -37,6 +40,7 @@ export default function RootLayout({
             <Footer />
             <Toaster position="top-right" />
             <ThemeSwitch />
+            <Switcher />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
